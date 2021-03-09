@@ -69,7 +69,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
+    public function actionAdminLogin()
     {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -106,7 +106,7 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['myEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
@@ -124,5 +124,25 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    /**
+     * Displays fund page.
+     *
+     * @return string
+     */
+    public function actionFund()
+    {
+        return $this->render('fund');
+    }
+
+    /**
+     * Displays news page.
+     *
+     * @return string
+     */
+    public function actionNews()
+    {
+        return $this->render('news');
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@fundmydreem.live',
-    'myEmail' => 'stran.nik@bk.ru',
-    'senderEmail' => 'noreply@fundmydreem.live',
-    'senderName' => 'Admin fundmydreem.live',
+    'adminEmail' => 'admin@fundmydream.live',
+    'myEmail' => 'wizard2013@yandex.ru',
+    'senderEmail' => 'noreply@fundmydream.live',
+    'senderName' => 'fundmydream.live',
 ];
